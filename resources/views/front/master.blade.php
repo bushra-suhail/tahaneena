@@ -28,6 +28,7 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{asset('webasset/assets/css/style.css')}}">
+    @yield('css')
 
 
 
@@ -45,7 +46,7 @@
 
                     <!-- header Logo Start -->
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="{{ asset('webasset/assets/images/logo.png') }}" alt="" title=""></a></div>
+                        <div class="logo"><a href="{{ route('website.index') }}"><img src="{{ asset('webasset/assets/images/logo.png') }}" alt="" title=""></a></div>
                     </div>
                     <!-- header Logo end -->
 
@@ -53,19 +54,97 @@
                     <div class="header-menu-toggler">
                         <a href="javascript:;" class="menu-toggler"><i class="las la-bars"></i></a>
                     </div>
+
                     <!-- header Menu Toggler end -->
 
                 </div>
             </div>
         </div>
         <!-- Header End -->
+        <!-- Header Off Canvas Menu Start -->
+        <div class="offcanvas-menu">
+            <div class="offcanvas-wrapper">
+                <div class="close-btn">
+                    <a href="javascript:;" class="menu-close"><i class="ion-ios-close-outline"></i></a>
+                </div>
+                <div class="logo">
+                    <a href="{{ route('website.index') }}"><img src="{{ asset('webasset/assets/images/logo-2.png') }}" alt="Logo"></a>
+                </div>
+                <div class="primary-menu">
+                    <ul>
+                        <li><a href="{{ route('website.index') }}">Home</a></li>
+                        <li>
+                            <a href="{{ route('login') }}">Login</a>
 
+
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Register</a>
+
+
+                        </li>
+
+                </div>
+            </div>
+        </div>
+        <!-- Header Off Canvas Menu End-->
+<!-- overly Start -->
+<div class="overlay"></div>
+<!-- overly End -->
+{{-- @include('partials.header') --}}
         @yield('content')
 
+<div>
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
 
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-twitter"></i
+                ></a>
 
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-google"></i
+                ></a>
 
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </section>
+              <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright:
+              <a class="text-white" href="{{ route('website.index') }}">TAHANEENA.com</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
         </div>
+
+
+
 
     <!-- JS
     ============================================ -->
@@ -94,6 +173,21 @@
 
     <!-- Main JS -->
     <script src="{{asset('webasset/assets/js/main.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                domtoimage.toBlob(document.getElementById('div'))
+                .then(function(blob){
+                    window.saveAs(blob,"output.png")
+                })
+            })
+        })
+    </script>
+    @yield('script')
 
 </body>
 

@@ -1,0 +1,114 @@
+.card-container {
+  background-image: url('./images/BG.jpg');
+  background-size:cover;
+  width: 60%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 20px;
+  margin-top: 165px;
+  margin-left: 18%;
+  margin-bottom: 40px;
+}
+
+.title-main {
+  font-size: 37.62px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+.confirm-btn {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  background-color: gray;
+  width: 26vh;
+  padding-block: 0.vh;
+  text-align: center;
+  border-radius: 1.5vh;
+  cursor: pointer;
+}
+.card-description {
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  border-width: 0ch;
+  margin-top: 390px;
+  margin-left: 350px;
+
+}
+
+.right-section {
+  width: 50%;
+}
+.left-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baloons {
+  width: 200%;
+  height: 100%;
+
+}
+
+.celebrate-date-container {
+  background-image: url('./images/ll.png');
+  height: 300px;
+  width: 500px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.lets-celebrate {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 10px;
+  padding-bottom: 25px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-block: 0px;
+  width: 18vh;
+
+}
+.celebrate-date {
+  font-size: 24.14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  width: 18vh;
+  margin-block: 0px;
+  margin-bottom: 2vh;
+}
+.congrates-type{
+  background-color: transparent;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: lighter;
+  font-family: 'Almarai', sans-serif;
+  width: 100%;
+  border-width: 0ch;
+}
