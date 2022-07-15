@@ -45,6 +45,7 @@ Route::get('/card7/{id}',[MainController::class,'card7'])->name('card7.details')
 Route::get('/card8/{id}',[MainController::class,'card8'])->name('card8.details');
 Route::get('/card9/{id}',[MainController::class,'card9'])->name('card9.details');
 Route::get('/card10/{id}',[MainController::class,'card10'])->name('card10.details');
+Route::get('/managerview',[MainController::class,'storecard'])->name('card.store');
 //Route::get('/buycard/{id}/thanks',[MainController::class,'buycard'])->name('buy card thanks');
 
 

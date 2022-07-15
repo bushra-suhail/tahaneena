@@ -74,10 +74,17 @@ class MainController extends Controller
 
         return view('front.card10');
     }
-    public function storecard($id)
-    {
-        $user = User::find($id);
-        $user->cards()->attach(1);
-    }
+    // public function storecard($id)
+    // {
+    //     $user = User::find($id);
+    //     $user->cards()->attach(1);
+    // }
 
+
+
+    public function storecard()
+{
+    $listcards['listcards'] = Card::where('user_id','=',Auth::user()->id)->get();
+    return view('manager.index')->with($listcards);
+}
 }

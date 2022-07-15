@@ -227,9 +227,9 @@
                                                             <h4 class="title"><a
                                                                     href="{{ route('card.details', $card->id) }}">
                                                                     {{ $card->title }}</a></h4>
-<form method="GET" action="">
+{{-- <form method="GET" action="">
 
-</form>
+</form> --}}
 
 
 
