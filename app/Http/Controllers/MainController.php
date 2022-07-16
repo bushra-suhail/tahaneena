@@ -31,60 +31,60 @@ class MainController extends Controller
 
         return view('front.card1',compact('cards'));
     }
-    function card2(){
+//     function card2(){
 
-        return view('front.card2');
-    }
-    function card3(){
+//         return view('front.card2');
+//     }
+//     function card3(){
 
-        $categories=Category::latest()->get();
-        return view('front.card3',compact('categories'));
-    }
-    function card4(){
+//         $categories=Category::latest()->get();
+//         return view('front.card3',compact('categories'));
+//     }
+//     function card4(){
 
-        return view('front.card4');
-    }
+//         return view('front.card4');
+//     }
 
-    function card5(){
+//     function card5(){
 
-        return view('front.card5');
-    }
+//         return view('front.card5');
+//     }
 
-    function card6(){
+//     function card6(){
 
-        return view('front.card6');
-    }
+//         return view('front.card6');
+//     }
 
-    function card7(){
+//     function card7(){
 
-        return view('front.card7');
-    }
+//         return view('front.card7');
+//     }
 
-    function card8(){
+//     function card8(){
 
-        return view('front.card8');
-    }
+//         return view('front.card8');
+//     }
 
-    function card9(){
+//     function card9(){
 
-        return view('front.card9');
-    }
+//         return view('front.card9');
+//     }
 
-    function card10(){
+//     function card10(){
 
-        return view('front.card10');
-    }
-    // public function storecard($id)
-    // {
-    //     $user = User::find($id);
-    //     $user->cards()->attach(1);
-    // }
+//         return view('front.card10');
+//     }
+//     // public function storecard($id)
+//     // {
+//     //     $user = User::find($id);
+//     //     $user->cards()->attach(1);
+//     // }
 
 
 
-    public function storecard()
-{
-    $listcards['listcards'] = Card::where('user_id','=',Auth::user()->id)->get();
-    return view('manager.index')->with($listcards);
-}
+//     public function storecard()
+// {
+//     $listcards['listcards'] = Card::where('user_id','=',Auth::user()->id)->get();
+//     return view('manager.index')->with($listcards);
+// }
 }
